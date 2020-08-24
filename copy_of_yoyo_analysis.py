@@ -101,7 +101,7 @@ df = pd.read_csv(io.BytesIO(data_to_load['some_reviews.csv']))
 #get rid of punctuations
 df['no_punct'] = df['Text'].str.replace('[^\w\s]', '')
 
-reviews = tv.fit_transform(df['no_punct'])
+reviews = tv.transform(df['no_punct'])
 
 result = clf.predict(reviews)
 
