@@ -94,8 +94,9 @@ print("accuracy is:", acc)
 
 We repeat the text preparation
 """
-
-df = pd.read_csv(judging)
+#You can test upload here
+data_to_load = files.upload()
+df = pd.read_csv(io.BytesIO(data_to_load['some_reviews.csv']))
 
 #get rid of punctuations
 df['no_punct'] = df['Text'].str.replace('[^\w\s]', '')
@@ -110,8 +111,3 @@ output.to_csv("predicted_labels.csv")
 
 """#□
 
-The upload files code:
-"""
-
-data_to_load = files.upload()
-df = pd.read_csv(io.BytesIO(data_to_load['contestant_judgement.csv']))
