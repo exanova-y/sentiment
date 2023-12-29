@@ -1,4 +1,4 @@
-# sentimental-ai
+# sentiment analysis
 
 Saturday, August 22nd
 -Workshops
